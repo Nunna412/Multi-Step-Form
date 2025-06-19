@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Multi-Step Form Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+This is a responsive multi-step form application built using React. It guides users through a series of steps to collect information, featuring dynamic content updates, step-by-step navigation, and client-side form validation. The application is styled purely with CSS, aiming for a clean and intuitive user experience.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* **Multi-Step Navigation:** Smooth transitions between different form steps.
+* **Active Step Indication:** Visually highlights the current step in the sidebar.
+* **Form Validation:** Client-side validation for input fields in Step 1 (Personal Info).
+* **Dynamic Plan Selection:** Users can choose between monthly and yearly billing plans, with prices updating accordingly.
+* **Add-on Selection:** Customizable add-ons that dynamically affect the total cost.
+* **Summary Page:** A comprehensive overview of selected options and total cost before confirmation.
+* **Confirmation Page:** A "Thank You" message upon successful form submission.
+* **Responsive Design:** Adapts fluidly to various screen sizes (desktop, tablet, mobile).
+* **Pure CSS Styling:** All styling is implemented using standard CSS, ensuring full control over the design.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshots
+![Step 1: Personal Info](https://github.com/user-attachments/assets/42cb2f14-6ccf-473e-a2f6-db57d72b8879) _A screenshot of Step 1: Personal Info_
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Step 2: Select Plan](https://github.com/user-attachments/assets/d0499d25-c092-4249-b6aa-8d017fe99a95) _A screenshot of Step 2: Select Plan wth monthly/ yearly toggle_
 
-### `npm test`
+![Step 3: Add-ons](https://github.com/user-attachments/assets/756fa508-79aa-4ad5-969b-023e597731f2)   _A screenshot of Step 3: Pick Add-ons_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Step 4: Summary](https://github.com/user-attachments/assets/5be66403-7757-46af-beb0-cf750d0c83a1)_A screenshot of Step 4: Finishing Up_
 
-### `npm run build`
+![Thank You Page](https://github.com/user-attachments/assets/9d4e37fe-66f5-4ce1-9c82-1ff5a91f2680)_A screenshot of the final "Thank you!" page_
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **React:** Frontend JavaScript library for building user interfaces.
+* **HTML5:** Structure of the web pages.
+* **CSS3:** Styling and responsive design.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+* Fill in the personal information on Step 1.
+* Click "Next Step" to proceed.
+* Select your preferred plan (monthly/yearly) on Step 2.
+* Choose any add-ons you like on Step 3.
+* Review your selections on the Summary page (Step 4). You can click "Change" to go back and modify your plan.
+* Click "Confirm" to finalize your subscription.
+* The application will display a "Thank You!" message.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
