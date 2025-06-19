@@ -1,0 +1,523 @@
+body{
+    margin:0;
+    font-family: 'Inter',sans-serif;
+    background-color: #eef5ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+    width: 100%;
+}
+.multi-step-form-card{
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 960px;
+    min-height: 600px;
+}
+.sidebar {
+    width: 275px;
+    flex-shrink: 0;
+    background-color: #483eff;
+    background-size: cover;
+    background-position: bottom left;
+    border-radius: 10px;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:30px;
+}
+.sidebar-steps{
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+}
+.step-item{
+    display: flex;
+    align-items: center;
+    gap:15px;
+}
+.step-number{
+    width:35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+.step-number.active{
+    background-color: #bfe2fd;
+    color: #02295a;
+    border-color: #bfe2fd;
+}
+.step-info p{
+    color:#d6d9e6;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.step-info h3{
+    color: #fff;
+    font-size: 1em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-content{
+    flex-grow: 1;
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.form-step{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.form-title{
+    color: #02295a;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.form-description{
+    color:#9699ab;
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+.form-group label{
+    display: block;
+    color: #02295a;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.form-group input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6d9e6;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #02295a;
+    box-sizing: border-box;
+}
+.form-group input:focus{
+    outline: none;
+    border-color: #483eff;
+}
+.form-group input.input-error{
+    border-color: #ee374a;
+}
+.error-message{
+    color: #ee374a;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+.form-navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+.next-button{
+    background-color: #02295a;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+}
+
+.next-button:hover{
+    background-color: #164a8a;
+}
+.back-button{
+    background: none;
+    color: #9699ab;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.back-button:hover{
+    color:#02295a;
+}
+.confirm-button{
+    background-color: #483eff;
+}
+.confirm-button:hover{
+    background-color: #645bff;
+}
+
+.plan-options{
+    display: flex;
+    gap:8px;
+    margin-bottom: 30px;
+}
+.plan-card{
+    border: 1px solid #d6d9e6;
+    border-radius: 10px;
+    padding: 18px;
+    width: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.plan-card:hover{
+    border-color: #483eff;
+}
+.plan-card.selected{
+    border-color: #483eff;
+    background-color: #f0f6ff;
+}
+.plan-card img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 35px;
+}
+.plan-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.plan-details h3{
+    margin: 0 0 5px 0;
+    color: #02295a;
+    font-size: 1.1em;
+}
+.plan-details p{
+    margin: 0;
+    color: #9699ab;
+    font-size: 0.9em;
+}
+.yearly-bonus{
+    color: #02295a;
+    font-size: 0.8em;
+    margin-top: 5px;
+    font-weight: 500;
+}
+.billing-toggle{
+    background-color: #f0f6ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.billing-toggle span{
+    color: #9699ab;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.billing-toggle span.active{
+    color: #02295a;
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: #02295a;
+    transition: 0.4s;
+}
+.slider::before{
+    position: absolute;
+    content: '';
+    height: 14px;
+    width: 14px;
+    left:4px;
+    bottom: 4px;
+    transition: 0.4s;
+}
+input:checked + .slider {
+    background-color: #02295a;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #02295a;
+}
+
+input:checked + .slider::before {
+    transform: translateX(18px);
+}
+
+.slider.round{
+    border-radius: 22px;
+}
+.slider.round::before{
+    border-radius: 50%;
+}
+.addon-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d6d9e6;
+    border-radius: 10px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.addon-card:hover{
+    border-color: #483eff;
+}
+.addon-card.selected{
+    border-color: #483eff;
+    background-color: #f0f6ff;
+}
+.addon-card input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    accent-color: #483eff;
+}
+.addon-details {
+    flex-grow: 1;
+}
+.addon-details h4{
+    margin: 0 0 5px 0;
+    color: #02295a;
+    font-size: 1.1em;
+}
+.addon-details p{
+    margin: 0;
+    color: #9699ab;
+    font-size: 0.9em;
+}
+.addon-price{
+    color: #483eff;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+.summary-card{
+    background-color: #f0f6ff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+.summary-plan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.summary-plan h3{
+    margin: 0;
+    color: #02295a;
+    font-size: 1.1em;
+}
+.summary-plan span{
+    color: #02295a;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+.change-plan-btn{
+    background: none;
+    border: none;
+    color: #9699ab;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.change-plan-btn:hover{
+   color: #483eff;
+}
+
+.summary-divider {
+    border: none;
+    border-top: 1px solid #d6d9e6;
+    margin: 20px 0;
+}
+
+.summary-addon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.summary-addon p {
+  margin: 0;
+  color: #9699ab;
+  font-size: 0.95em;
+}
+
+.summary-addon span {
+  color: #02295a;
+  font-size: 0.95em;
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.total-section p {
+  color: #9699ab;
+  font-size: 0.95em;
+  margin: 0;
+}
+
+.total-price {
+  color: #483eff;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+/* Thank You Page */
+.thank-you-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+  flex-grow: 1;
+}
+
+.thank-you-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 30px;
+  /* For the checkmark icon, you can use an SVG directly or an image. */
+  /* If using an image, make sure to replace the placeholder */
+}
+
+.thank-you-container h2 {
+  color: #02295a;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.thank-you-container p {
+  color: #9699ab;
+  font-size: 1em;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .multi-step-form-card {
+    flex-direction: column;
+    width: 100%;
+    min-height: auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 170px;
+    border-radius: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 0;
+  }
+
+  .sidebar-steps {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .step-info {
+    display: none; /* Hide text on small screens */
+  }
+
+  .form-content {
+    padding: 30px 20px;
+    position: relative;
+    top: -80px; /* Overlap with sidebar */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 15px; /* Add margin to create card effect */
+  }
+
+  .form-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+  }
+
+  .form-title {
+    font-size: 1.8em;
+  }
+
+  .plan-options {
+    flex-direction: column;
+  }
+
+  .plan-card {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .plan-card img {
+    margin-bottom: 0;
+  }
+
+  .billing-toggle {
+    margin-top: 20px;
+  }
+
+  .addon-card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .thank-you-container {
+    padding: 30px;
+  }
+}
